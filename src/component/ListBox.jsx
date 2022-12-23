@@ -10,15 +10,17 @@ function ListBox(props) {
                 <div class="flex flex-col md:justify-between justify-between md:gap-0 gap-4 md:items-start py-4 md:px-0 px-4">
                     <div>
                         <h1 className='text-3xl font-bold'>{props.name}</h1>
-                        <p className='flex items-center'><div className={`inline-block mr-2 h-2 w-2  ${props.status === "Alive" ? 'bg-green-500' : 'bg-red-500'} rounded-full`}></div>{props.status}</p>
+                        <p className='flex items-center'><div className={`inline-block mr-2 h-2 w-2  ${props.status === "Alive" ? 'bg-green-500' : 'bg-red-500'} rounded-full`}></div>{props.status} - {props.species}</p>
                     </div>
                     <div>
                         <h3>Last Known Location</h3>
-                        <p className='text-xl'>location</p>
+                        <p className='text-xl'>{props.mylocation}</p>
                     </div>
                     <div>
-                        <h3>First seen in:</h3>
-                        <p className='text-md'>episode</p>
+                        <h3>Origin:</h3>
+                        <p className='text-md'>{props.origin}</p>
+                        {/* <h3>First seen in:</h3>
+                        <p className='text-md'>episode</p> */}
                     </div>
                 </div>
             </div>

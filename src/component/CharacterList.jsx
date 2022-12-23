@@ -30,7 +30,7 @@ function CharacterList() {
 
                         <li key={character.id}>
                             <Link className='cursor-pointer' to={`/characters/${character.id}`}>
-                                <ListBox key={character.id} name={character.name} image={character.image} status={character.status} species={character.species} episode={character.episode.name} > </ListBox>
+                                <ListBox key={character.id} name={character.name} image={character.image} status={character.status} species={character.species} episode={character.episode.name} mylocation={character.location?.name} origin={character.origin.name}> </ListBox>
                             </Link>
                         </li>
 
