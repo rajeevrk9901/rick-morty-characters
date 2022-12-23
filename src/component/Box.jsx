@@ -3,10 +3,9 @@ import React from 'react'
 function Box(props) {
     return (
         <>
-
-            <div class="box1 flex h-[300px] bg-red-300 rounded-2xl gap-2">
+            <div class="box1 flex h-[300px] bg-[#3C3E44] rounded-2xl gap-4 text-white">
                 <div class=""><img class="rounded-l-2xl" src={props.image} alt="" srcset="" /></div>
-                <div class=" flex flex-col justify-around">
+                <div class="flex flex-col justify-around">
                     <div>
                         <h1 className='text-3xl font-bold'>{props.name}</h1>
                         <p><div className='inline-block mr-2 h-2 w-2 bg-green-500 rounded-full'></div>{props.status}</p>

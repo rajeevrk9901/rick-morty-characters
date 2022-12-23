@@ -10,7 +10,6 @@ function App() {
   return (
     <Routes>
       {/* <Route exact path="/" element={<Home />} /> */}
-
       {/* <Route exact path="/" element={CharacterList} >
         redirect("/characters")
       </Route> */}

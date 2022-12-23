@@ -3,9 +3,8 @@ import React from 'react'
 function Header() {
     return (
         <>
-            <header className='bg-red-200'>
+            <header className='bg-white'>
                 <nav className='flex h-16 justify-between items-center px-12 py-4'>
-
                     <img className='h-12' src="https://www.freepnglogos.com/uploads/rick-and-morty-png/rick-and-morty-wazzaldorp-deviantart-34.png" alt="Rick and Morty Logo" />
 
                     <ul className='flex gap-6 items-center'>
