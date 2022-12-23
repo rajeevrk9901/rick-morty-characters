@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import DetailBox from './DetailBox';
+
+
 
 function CharacterDetail() {
     const { id } = useParams();
@@ -18,17 +21,9 @@ function CharacterDetail() {
     let { image, origin, species, gender, status, name } = character;
 
     return (
-        <div>
-            <h1>Character Details</h1>
-            <Link to="/characters">Back</Link>
-            <h1>{name}</h1>
-            <img src={image} alt="" srcset="" />
-            <p>{status}</p>
-            <p>{species}</p>
-            <p>{gender}</p>
-            <p>{origin?.name}</p>
-
-        </div>
+        <>
+            <DetailBox image={image} origin={origin} species={species} gender={gender} status={status} name={name} />
+        </>
     );
 }
 

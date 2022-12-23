@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Box from './Box';
+import ListBox from './ListBox';
 import Header from './Header';
 
 function CharacterList() {
@@ -30,7 +30,7 @@ function CharacterList() {
 
                         <li key={character.id}>
                             <Link className='cursor-pointer' to={`/characters/${character.id}`}>
-                                <Box key={character.id} name={character.name} image={character.image} status={character.status} species={character.species} episode={character.episode.name} > </Box>
+                                <ListBox key={character.id} name={character.name} image={character.image} status={character.status} species={character.species} episode={character.episode.name} > </ListBox>
                             </Link>
                         </li>
 
