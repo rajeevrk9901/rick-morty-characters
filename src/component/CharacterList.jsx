@@ -22,7 +22,7 @@ function CharacterList() {
             <Header />
             <ul className='bg-gray-800'>
                 {/* <h1>Characters</h1> */}
-                <div class="grid md:grid-cols-2 grid-cols-1 gap-8 bg-[#272B33] py-16 md:px-28 px-8">
+                <div class="grid md:grid-cols-2 grid-cols-1 gap-8 bg-[#272B33] py-16 md:px-24 px-8">
                     {characters.map((character) => (
                         // <li key={character.id}>
                         //     <Link to={`/characters/${character.id}`}>{character.name}</Link>
