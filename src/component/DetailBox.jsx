@@ -18,7 +18,7 @@ function DetailBox(props) {
                     <p>{status}</p>
                     <p>{species}</p>
                     <p>{gender}</p>
-                    <p>ORIGIN: {origin?.name}</p>
+                    <p>{origin?.name}</p>
                 </div>
 
             </div>

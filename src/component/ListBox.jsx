@@ -5,7 +5,7 @@ function ListBox(props) {
         <>
             <div class="box1 md:flex-row flex flex-col w-full bg-[#3C3E44] rounded-2xl md:gap-4 gap-0 text-white">
                 <div class="">
-                    <img class="md:rounded-l-2xl rounded-t-2xl md:w-[229px] md:h-[220px] w-full aspect-[67/50] " src={props.image} alt="" srcset="" />
+                    <img class="md:rounded-l-2xl md:rounded-r-none  rounded-t-2xl  md:w-[229px] md:h-[220px] w-full aspect-[67/50] " src={props.image} alt="" srcset="" />
                 </div>
                 <div class="flex flex-col md:justify-between justify-between md:gap-0 gap-4 md:items-start py-4 md:px-0 px-4">
                     <div>
