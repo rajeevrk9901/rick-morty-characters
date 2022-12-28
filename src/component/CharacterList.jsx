@@ -2,19 +2,29 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ListBox from './ListBox';
 import Header from './Header';
+import Pagination from './Pagination';
 
 function CharacterList() {
     const [characters, setCharacters] = useState([]);
+    const [pageNumber, setPageNumber] = useState(1);
+    const [info, setInfo] = useState([]);
+    console.log(info);
+    // console.log(results);
+    // let api = `https://rickandmortyapi.com/api/character/?page=4`
+    let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}`
+
 
     useEffect(() => {
-        async function fetchData() {
-            const response = await fetch('https://rickandmortyapi.com/api/character/');
-            const data = await response.json();
+        (async function () {
+            // const response = await fetch(api);
+            // const data = await response.json();
+            let data = await fetch(api).then((res) => res.json());
             setCharacters(data.results);
+            setInfo(data.info);
             // console.log(data.results);
-        }
-        fetchData();
-    }, []);
+        })();
+
+    }, [api]);
 
     return (
 
@@ -31,6 +41,8 @@ function CharacterList() {
                         <li key={character.id}>
                             <Link className='cursor-pointer' to={`/characters/${character.id}`}>
                                 <ListBox key={character.id} name={character.name} image={character.image} status={character.status} species={character.species} episode={character.episode.name} mylocation={character.location?.name} origin={character.origin.name}> </ListBox>
+
+                                {/* <ListBox ></ListBox> */}
                             </Link>
                         </li>
 
@@ -38,6 +50,7 @@ function CharacterList() {
                     ))}
                 </div>
             </ul>
+            <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber} />
             {/* <Box name={name} /> */}
         </>
 
