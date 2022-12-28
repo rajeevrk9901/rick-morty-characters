@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ListBox from './ListBox';
 import Header from './Header';
 import Pagination from './Pagination';
+import Footer from './Footer';
 
 function CharacterList() {
     const [characters, setCharacters] = useState([]);
@@ -51,6 +52,7 @@ function CharacterList() {
                 </div>
             </ul>
             <Pagination info={info} pageNumber={pageNumber} setPageNumber={setPageNumber} />
+            <Footer />
             {/* <Box name={name} /> */}
         </>
 
