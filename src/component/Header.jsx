@@ -1,8 +1,12 @@
-import React from 'react'
+// import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../images/rick-and-morty-wazzaldorp-deviantart-34.png'
+// import Search from './Search'
+
 
 function Header() {
+    // const [search, setSearch] = useState();
+
     return (
         <>
             <header className='bg-white'>
@@ -15,8 +19,10 @@ function Header() {
                         <Link className='uppercase py-2 px-3 border-2 border-orange-300 rounded-xl'>Support Us</Link>
                     </ul>
                 </nav>
-                <h1 className='text-center font-extrabold text-6xl py-28'>The Rick and Morty API</h1>
+                <h1 className='drop-shadow-xl text-center font-extrabold text-6xl py-20'> The Rick and Morty API </h1>
+                {/* <Search setSearch={setSearch} /> */}
             </header>
+
         </>
     )
 }
