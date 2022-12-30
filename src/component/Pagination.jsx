@@ -16,7 +16,8 @@ const Pagination = ({ info, pageNumber, setPageNumber }) => {
             pageLinkClassName="text-white px-2 py-1 rounded-sm hover:bg-blue-500"
             nextLabel="Next"
             previousLinkClassName="text-white" nextLinkClassName="text-white" breakLinkClassName="text-white" activeClassName="bg-blue-800 px-2 py-1 rounded-sm" activeLinkClassName="text-white rounded-sm"
-            pageCount={info.pages} onPageChange={(data) => setPageNumber(data.selected + 1)} containerClassName="pagination" marginPagesDisplayed={2} pageRangeDisplayed={2} forcePage={pageNumber - 1} />
+            pageCount={Math.ceil(info.pages)}
+            onPageChange={(data) => setPageNumber(data.selected + 1)} containerClassName="pagination" marginPagesDisplayed={2} pageRangeDisplayed={2} forcePage={pageNumber - 1} />
     )
 }
 

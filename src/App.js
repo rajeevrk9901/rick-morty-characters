@@ -14,6 +14,7 @@ function App() {
         redirect("/characters")
       </Route> */}
       <Route exact path="/" element={<Navigate to="/characters" />} />
+
       <Route exact path="/characters" element={<CharacterList />} />
       <Route path="/characters/:id" element={<CharacterDetail />} />
     </Routes>
